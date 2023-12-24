@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+</head>
+<body>
+    <label for="pilihGambar">Pilih Gambar:</label>
+    <select id="pilihGambar" onchange="tampilkanGambar()">
+      <option value="Dprian">Dpr Ian</option>
+      <option value="Mads">Mads Mikelsen</option>
+      <option value="jeremy_irons">Jeremy Irons</option>
+      <option value="Namjoon">Namjoon</option>
+      <option value="OscarIssac">Oscar Issac</option>
+    </select>
+    <br />
+    <br>
+
+    <img
+      src="foto1.png"
+      id="gambarTerpilih"
+      alt="Gambar Terpilih"
+      width="300"
+    />
+
+    <script>
+      function tampilkanGambar() {
+        let nilaiTerpilih = document.getElementById("pilihGambar").value;
+        let gambarTerpilih = document.getElementById("gambarTerpilih");
+
+        switch (nilaiTerpilih) {
+          case "Dprian":
+            gambarTerpilih.src = "Dprian.jpg";
+            break;
+          case "Mads":
+            gambarTerpilih.src = "Mads.jpg";
+            break;
+          case "jeremy_irons":
+            gambarTerpilih.src = "jeremy_irons.jpg";
+            break;
+          case "Namjoon":
+            gambarTerpilih.src = "Namjoon.jpg";
+            break;
+          case "OscarIssac":
+            gambarTerpilih.src = "OscarIssac.jpg";
+            break;
+        }
+      }
+    </script>
+</body>
+</html>
